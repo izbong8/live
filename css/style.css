@@ -1,0 +1,43 @@
+@charset "UTF-8";
+* { margin: 0; padding: 0; } 
+ul,li { margin: 0; padding: 0; list-style: none; } 
+a { text-decoration: none; } 
+body { width: 100%; height: 100vh; background: url("../images/bg.svg")no-repeat center/cover; font-family: 'Noto Sans CJK KR', sans-serif; } 
+
+#wrap header { width: 95%; height: 10vh; margin: 0 auto; } 
+#wrap header .mainlogomenu { width: 100%; height: 80px; display: flex; justify-content: space-between; } 
+#wrap header .mainlogomenu .logo img { margin-top: 15px; } 
+#wrap header .mainlogomenu .menu { margin-top: 20px; } 
+#wrap header .mainlogomenu .menu ul { width: 400px; display: flex; justify-content: space-between; } 
+#wrap header .mainlogomenu .menu ul li a { font-weight: bold; color: #fff; } 
+#wrap header .mainlogomenu .menu ul li a:hover,
+#wrap header .mainlogomenu .menu ul li a:focus {opacity: 0.5;}
+#wrap header nav.toggle { display: none; } 
+
+#wrap main { width: 100%; height: 80vh; } 
+#wrap main .centerimg { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); } 
+#wrap main .centerimg img { max-width: 100%; } 
+
+#wrap footer { width: 95%; margin: 0 auto; } 
+#wrap footer .mainbtn { width: 100%; height: 50px; position: relative; } 
+footer .mainbtn .btn { position: absolute; bottom: -10px; right: -5px; } 
+
+#popup {width: 442px; height: 444px; background: url("../images/popup.png")no-repeat; position: absolute; right: 50px; bottom: 50px; box-shadow: 0 0 10px rgba(0,0,0,0.5); border-radius: 30px; display: none;}
+.close {position: absolute; top: 10px; right: 20px; font-size: 30px; color: #fff; cursor: pointer; display: block;} 
+.close:hover {opacity: 0.5;}
+
+/* mobile */
+@media(max-width:720px){
+ #wrap header nav.menu { display: none; } 
+ #wrap header nav.toggle { display: block; } 
+ #wrap header nav.toggle span { display: block; position: absolute; top: 23px; right: 14px; } 
+ #wrap header nav.toggle span img { width: 35px; } 
+ #wrap header nav.toggle span img:hover { opacity: 0.5; } 
+ #wrap header nav.toggle .overlay a.closebtn { font-size: 40px; position: absolute; top: 8px; right: 15px; color: #fff;} 
+ #wrap header nav.toggle .overlay a.closebtn:hover {opacity: 0.5;}
+ #wrap header nav.toggle .overlay { width: 0; height: 100%; position: fixed; z-index: 2; top: 0; right: 0; background-color: rgba(0,0,0,0.9); overflow: hidden; transition: 0.1s; } 
+ #wrap header nav.toggle .overlay ul li a { opacity: 1; padding: 15px; font-size: 20px; color: #fff; display: block; transition: 0.3s; } 
+ #wrap header nav.toggle .overlay ul li a:hover,
+ #wrap header nav.toggle .overlay ul li a:focus { opacity: 0.5; } 
+ #wrap header nav.toggle .overlay .overlay-contents { position: relative; top: 25%; width: 100%; text-align: center; margin-top: 30px; }
+ }
